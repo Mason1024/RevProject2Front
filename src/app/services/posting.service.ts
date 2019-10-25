@@ -1,13 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Posting } from '../models/posting';
-import { Observable } from 'rxjs';
-import { post } from 'selenium-webdriver/http';
 
 @Injectable({
   providedIn: 'root'
 })
-export class PostService {
+export class PostingService {
 
   baseUrl:string = "http://ec2-18-221-114-64.us-east-2.compute.amazonaws.com:9000";
 
@@ -19,12 +17,12 @@ export class PostService {
   }
 
   getAllPostingsByUserId(id:number):Promise<Posting[]>{
-    let response:Promise<Posting[]> = this.http.get<Posting[]>(`${this.baseUrl}postings/${id}/`).toPromise();
+    let response:Promise<Posting[]> = this.http.get<Posting[]>(`${this.baseUrl}postings/allbyuser/${id}/`).toPromise();
     return response;  
   }
 
   getAllPostingsByEndingSoonest():Promise<Posting[]>{
-    let response:Promise<Posting[]> = this.http.get<Posting[]>(`${this.baseUrl}postings/`).toPromise();
+    let response:Promise<Posting[]> = this.http.get<Posting[]>(`${this.baseUrl}postings/ending/`).toPromise();
     return response;  
   }
 
@@ -48,8 +46,8 @@ export class PostService {
     return request;
   }
 
-  deletePosting(posting:Posting):Promise<Posting>{
-    let request:Promise<Posting> = this.http.post<Posting>(`${this.baseUrl}posting/`,posting).toPromise();
+  deletePosting(id:number):Promise<boolean>{
+    let request:Promise<boolean> = this.http.delete<boolean>(`${this.baseUrl}posting/${id}`).toPromise();
     return request;
   }
 }
