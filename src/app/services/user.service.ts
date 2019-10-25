@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { User } from '../models/user';
 
 @Injectable({
@@ -11,6 +11,13 @@ export class UserService {
 
   constructor(private http:HttpClient) { }
 
+  // Create
+  createUser(user:User):Promise<User> {
+    let request:Promise<User> = this.http.post<User>(`${this.baseUrl}users/`, user).toPromise();
+    return request;
+  }
+
+  // Read
   getUserById(id:number):Promise<User> {
     let response:Promise<User> = this.http.get<User>(`${this.baseUrl}users/${id}/`).toPromise();
     return response;
@@ -24,5 +31,15 @@ export class UserService {
   getAllUsers():Promise<User[]> {
     let response:Promise<User[]> = this.http.get<User[]>(`${this.baseUrl}users/`).toPromise();
     return response;
+  }
+
+  updateUser(user:User):Promise<User> {
+    let request:Promise<User> = this.http.put<User>(`${this.baseUrl}users/`, user).toPromise();
+    return request;
+  }
+
+  deleteUser(id:number):Promise<boolean> {
+    let request:Promise<boolean> = this.http.delete<boolean>(`${this.baseUrl}users/${id}/`).toPromise();
+    return request;
   }
 }
