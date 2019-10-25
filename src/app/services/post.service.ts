@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Posting } from '../models/posting';
+import { Observable } from 'rxjs';
+import { post } from 'selenium-webdriver/http';
 
 @Injectable({
   providedIn: 'root'
@@ -36,6 +38,18 @@ export class PostService {
     return response;  
   }
   
-  
+  createPosting(posting:Posting):Promise<Posting>{
+    let request:Promise<Posting> = this.http.post<Posting>(`${this.baseUrl}posting/`,posting).toPromise();
+    return request;
+  }
 
+  updatePosting(posting:Posting):Promise<Posting>{
+    let request:Promise<Posting> = this.http.put<Posting>(`${this.baseUrl}posting/,`,posting).toPromise();
+    return request;
+  }
+
+  deletePosting(posting:Posting):Promise<Posting>{
+    let request:Promise<Posting> = this.http.post<Posting>(`${this.baseUrl}posting/`,posting).toPromise();
+    return request;
+  }
 }
