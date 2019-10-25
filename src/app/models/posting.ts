@@ -1,4 +1,4 @@
-export class Post{
+export class Posting{
 
     p_id:number;
     u_id:number;
