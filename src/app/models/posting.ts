@@ -1,23 +1,21 @@
 export class Posting{
 
-    p_id:number;
-    u_id:number;
+    id:number;
+    user:number;
     description:string;
     category:string;
     location:string;
-    init_date:number;
-    end_date:number;
+    initDate:number;
+    endDate:number;
 
-    constructor(p_id:number,u_id:number,description:string,category:string,
+    constructor(id:number,u_id:number,description:string,category:string,
         location:string,init_date:number,end_date:number){
-            this.p_id = p_id;
-            this.u_id = u_id;
+            this.id = id;
+            this.id = id;
             this.description = description;
             this.category = category;
             this.location = location;
-            this.init_date = init_date;
-            this.end_date = end_date;
+            this.initDate = init_date;
+            this.endDate = end_date;
         }
-
-
 }
