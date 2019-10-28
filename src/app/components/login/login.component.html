@@ -1,0 +1,29 @@
+<div class="container">
+    <div>
+        <div>
+            <div>
+                <br>
+                <br>
+                <form>
+                    <div>
+                        <label for="username">Username</label>
+                        <input [(ngModel)]="login_username" name="login_username" type="text" id="username" placeholder="username">
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input [(ngModel)]="login_password" name="login_password" type="password" id="password" placeholder="password">
+                    </div>
+                    <div>
+                        <button id="login" (click)="validate()" type="submit" > Login </button>
+                       <!-- unimplemented -->
+                        <!-- <button id="register" (click)="register()" type="button" > Register </button> -->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div>
+        <alert></alert>
+    </div>
+
+</div>
