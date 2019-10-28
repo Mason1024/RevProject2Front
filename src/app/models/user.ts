@@ -1,19 +1,19 @@
 import { Posting } from './posting';
 
 export class User {
-	u_id:number;
+	id:number;
 	username:string;
 	password:string;
 	email:string;
-	phone_number:string;
+	phoneNumber:string;
 	postings:Posting[]; // Array of post Ids
 
-	constructor(u_id:number, username:string, password:string, email:string, phone_number:string, postings:Posting[]) {
-		this.u_id = u_id;
+	constructor(id:number, username:string, password:string, email:string, phone_number:string, postings:Posting[]) {
+		this.id = id;
 		this.username = username;
 		this.password = password;
 		this.email = email;
-		this.phone_number = phone_number;
+		this.phoneNumber = phone_number;
 		this.postings = postings;
 	}
 
