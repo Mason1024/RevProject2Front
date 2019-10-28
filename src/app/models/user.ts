@@ -17,4 +17,7 @@ export class User {
 		this.postings = postings;
 	}
 
+	public set postings(value: Posting[]) {
+		this.postings = value;
+    }
 }
