@@ -7,7 +7,7 @@ import { Posting } from '../models/posting';
 })
 export class PostingService {
 
-  baseUrl:string = "http://ec2-18-221-114-64.us-east-2.compute.amazonaws.com:9000/";
+  baseUrl:string = "http://ec2-18-221-114-64.us-east-2.compute.amazonaws.com:9000";
 
   constructor(private http:HttpClient) { }
 
