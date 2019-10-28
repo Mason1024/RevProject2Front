@@ -23,11 +23,6 @@ export class UserService {
     return response;
   }
 
-  getUserByUsername(username:string):Promise<User> {
-    let response:Promise<User> = this.http.get<User>(`${this.baseUrl}users/${username}/`).toPromise();
-    return response;
-  }
-
   getAllUsers():Promise<User[]> {
     let response:Promise<User[]> = this.http.get<User[]>(`${this.baseUrl}users/`).toPromise();
     return response;
