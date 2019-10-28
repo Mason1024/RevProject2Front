@@ -37,17 +37,17 @@ export class PostingService {
   }
   
   createPosting(posting:Posting):Promise<Posting>{
-    let request:Promise<Posting> = this.http.post<Posting>(`${this.baseUrl}posting/`,posting).toPromise();
+    let request:Promise<Posting> = this.http.post<Posting>(`${this.baseUrl}postings/`,posting).toPromise();
     return request;
   }
 
   updatePosting(posting:Posting):Promise<Posting>{
-    let request:Promise<Posting> = this.http.put<Posting>(`${this.baseUrl}posting/,`,posting).toPromise();
+    let request:Promise<Posting> = this.http.put<Posting>(`${this.baseUrl}postings/,`,posting).toPromise();
     return request;
   }
 
   deletePosting(id:number):Promise<boolean>{
-    let request:Promise<boolean> = this.http.delete<boolean>(`${this.baseUrl}posting/${id}`).toPromise();
+    let request:Promise<boolean> = this.http.delete<boolean>(`${this.baseUrl}postings/${id}`).toPromise();
     return request;
   }
 }
