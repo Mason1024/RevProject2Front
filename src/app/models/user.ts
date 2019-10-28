@@ -16,8 +16,4 @@ export class User {
 		this.phoneNumber = phone_number;
 		this.postings = postings;
 	}
-
-	public set postings(value: Posting[]) {
-		this.postings = value;
-    }
 }

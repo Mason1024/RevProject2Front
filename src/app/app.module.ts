@@ -5,14 +5,47 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CategoriesComponent } from './components/categories/categories.component';
-import { SearchComponent } from './components/search/search.component';
+
+//header
+import { HeaderComponent } from './components/header/header/header.component';
+import { LoginComponent } from './components/header/login/login.component';
+import { NewUserComponent } from './components/header/new-user/new-user.component';
+
+//user hub
+import { UserHubComponent } from './components/userHub/user-hub/user-hub.component';
+import { NewPostComponent } from './components/userHub/new-post/new-post.component';
+import { EditPostComponent } from './components/userHub/edit-post/edit-post.component';
+import { DeletePostComponent } from './components/userHub/delete-post/delete-post.component';
+
+//market
+import { MarketContainerComponent } from './components/market/market-container/market-container.component';
+import { CategoriesDropdownComponent } from './components/market/categories-dropdown/categories-dropdown.component';
+import { CategoryComponent } from './components/market/category/category.component';
+import { SearchComponent } from './components/market/search/search.component';
+import { PostingContainerComponent } from './components/market/posting-container/posting-container.component';
+import { PostingComponent } from './components/market/posting/posting.component';
+
+//footer
+import { FooterComponent } from './components/footer/footer.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    CategoriesComponent,
-    SearchComponent
+    SearchComponent,
+    HeaderComponent,
+    LoginComponent,
+    NewUserComponent,
+    UserHubComponent,
+    NewPostComponent,
+    EditPostComponent,
+    DeletePostComponent,
+    MarketContainerComponent,
+    PostingContainerComponent,
+    PostingComponent,
+    CategoriesDropdownComponent,
+    CategoryComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
