@@ -11,7 +11,7 @@ export class LoginService {
   constructor(private httpClient:HttpClient) { }
 
   validate(username:string, password:string){
-    return this.httpClient.post(this.url, {username,password}, {responseType:"text", observe:"response"});
+    return this.httpClient.post(this.url+"/login", {username,password}, {responseType:"text", observe:"response"});
   }
 
 }
