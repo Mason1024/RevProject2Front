@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/models/user';
+import { CurrentUserService } from 'src/app/services/current-user.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +9,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  user:User;
 
-  ngOnInit() {
+  constructor(private uService:CurrentUserService) { }
+
+  ngOnInit() { // May need to switch to obversable method
+    this.user = this.uService.getStaticUser();
+  }
+
+  hub(user:User):void {
+      
+  }
+
+  logout(user:User):void {
+
+  }
+
+  login():void {
+
+  }
+
+  register():void {
+
   }
 
 }
