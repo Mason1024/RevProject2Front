@@ -2,8 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { MatSliderModule } from '@angular/material/slider';
-import { MatNavList} from '@angular/material/list';
+import { MatListModule } from '@angular/material/list';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -62,8 +61,7 @@ import { PostingFormComponent } from './components/userHub/posting-form/posting-
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatSliderModule,
-    MatNavList
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
