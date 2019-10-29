@@ -2,7 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { MatSliderModule, MatSlider } from '@angular/material/slider';
+import { MatSliderModule } from '@angular/material/slider';
+import {MatListModule, MatNavList} from '@angular/material/list';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -55,7 +56,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatSliderModule
+    MatSliderModule,
+    MatNavList
   ],
   providers: [],
   bootstrap: [AppComponent]
