@@ -23,6 +23,10 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
+  back():void {
+    // Route to home
+  }
+
   validate():void{
 
     this.loginService.validate(this.login_username,this.login_password).subscribe(
