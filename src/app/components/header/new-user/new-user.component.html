@@ -1,1 +1,26 @@
-<p>new-user works!</p>
+<form>
+    <div>
+        <label for="username">Username</label>
+        <input [(ngModel)]="username" name="username" type="text" placeholder="Username">
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input [(ngModel)]="password" name="password" type="password" placeholder="Password">
+	</div>
+	<div>
+        <label for="confirmPassword">Password</label>
+        <input [(ngModel)]="confirmPassword" name="confirmPassword" type="password"" placeholder="Password">
+	</div>
+	<div>
+        <label for="email">Email</label>
+        <input [(ngModel)]="email" name="email" type="email"" placeholder="Email">
+	</div>
+	<div>
+        <label for="phone">Phone</label>
+        <input [(ngModel)]="phone" name="phone" type="tel" placeholder="Phone">
+	</div>
+    <div>
+        <button (click)="validate()" type="submit">Sign Up</button>
+        <button (click)="back()">Back</button>
+    </div>
+</form>

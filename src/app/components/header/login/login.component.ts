@@ -11,8 +11,8 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  login_username:string;
-  login_password:string;
+  username:string;
+  password:string;
 
   constructor(
     private loginService:LoginService,
@@ -23,9 +23,13 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
+  back():void {
+    // Route to home
+  }
+
   validate():void{
 
-    this.loginService.validate(this.login_username,this.login_password).subscribe(
+    this.loginService.validate(this.username,this.password).subscribe(
       resp=>{
         let respJSON = JSON.parse(resp.body);
         if(resp.status == 202){

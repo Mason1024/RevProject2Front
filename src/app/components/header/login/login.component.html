@@ -1,29 +1,14 @@
-<div class="container">
+<form>
     <div>
-        <div>
-            <div>
-                <br>
-                <br>
-                <form>
-                    <div>
-                        <label for="username">Username</label>
-                        <input [(ngModel)]="login_username" name="login_username" type="text" id="username" placeholder="username">
-                    </div>
-                    <div>
-                        <label for="password">Password</label>
-                        <input [(ngModel)]="login_password" name="login_password" type="password" id="password" placeholder="password">
-                    </div>
-                    <div>
-                        <button id="login" (click)="validate()" type="submit" > Login </button>
-                       <!-- unimplemented -->
-                        <!-- <button id="register" (click)="register()" type="button" > Register </button> -->
-                    </div>
-                </form>
-            </div>
-        </div>
+        <label for="username">Username</label>
+        <input [(ngModel)]="username" name="username" type="text" placeholder="Username">
     </div>
     <div>
-        <alert></alert>
+        <label for="password">Password</label>
+        <input [(ngModel)]="password" name="password" type="password" placeholder="Password">
     </div>
-
-</div>
+    <div>
+        <button (click)="validate()" type="submit">Login</button>
+        <button (click)="back()">Back</button>
+    </div>
+</form>
