@@ -46,6 +46,7 @@ export class NewUserComponent implements OnInit {
           
           // Check if user creation was successful
           if (newUser != null) {
+            this.currentUser.setUser(newUser);
             // Success, Route to home
           }
         }
