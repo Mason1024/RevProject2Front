@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSliderModule } from '@angular/material/slider';
-import {MatListModule, MatNavList} from '@angular/material/list';
+import { MatNavList} from '@angular/material/list';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -33,7 +33,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserPostingContainerComponent } from './components/userHub/user-posting-container/user-posting-container.component';
 import { UserPostingComponent } from './components/userHub/user-posting/user-posting.component';
 import { PostingFormComponent } from './components/userHub/posting-form/posting-form.component';
-import { NewUserFormComponent } from './components/header/new-user-form/new-user-form.component';
 
 
 @NgModule({
@@ -55,8 +54,7 @@ import { NewUserFormComponent } from './components/header/new-user-form/new-user
     FooterComponent,
     UserPostingContainerComponent,
     UserPostingComponent,
-    PostingFormComponent,
-    NewUserFormComponent
+    PostingFormComponent
   ],
   imports: [
     BrowserModule,
