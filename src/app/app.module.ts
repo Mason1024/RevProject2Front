@@ -30,6 +30,10 @@ import { PostingComponent } from './components/market/posting/posting.component'
 //footer
 import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UserPostingContainerComponent } from './components/userHub/user-posting-container/user-posting-container.component';
+import { UserPostingComponent } from './components/userHub/user-posting/user-posting.component';
+import { PostingFormComponent } from './components/userHub/posting-form/posting-form.component';
+import { NewUserFormComponent } from './components/header/new-user-form/new-user-form.component';
 
 
 @NgModule({
@@ -48,7 +52,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PostingComponent,
     CategoriesDropdownComponent,
     CategoryComponent,
-    FooterComponent
+    FooterComponent,
+    UserPostingContainerComponent,
+    UserPostingComponent,
+    PostingFormComponent,
+    NewUserFormComponent
   ],
   imports: [
     BrowserModule,
