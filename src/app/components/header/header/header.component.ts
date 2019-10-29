@@ -18,19 +18,20 @@ export class HeaderComponent implements OnInit {
   }
 
   hub(user:User):void {
-      
+      // Route to user-hub
   }
 
   logout(user:User):void {
-
+    user = null;
+    // Route to home
   }
 
   login():void {
-
+    // Route to login
   }
 
   register():void {
-
+    // Route to new-user
   }
 
 }
