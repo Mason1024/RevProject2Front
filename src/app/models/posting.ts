@@ -9,9 +9,10 @@ export class Posting{
     location:string;
     initDate:number;
     endDate:number;
+    title:string;
 
     constructor(id:number,user:User,description:string,category:string,
-        location:string,initDate:number,endDate:number){
+        location:string,initDate:number,endDate:number, title:string){
             this.id = id;
             this.user = user;
             this.description = description;
@@ -19,5 +20,6 @@ export class Posting{
             this.location = location;
             this.initDate = initDate;
             this.endDate = endDate;
+            this.title = title;
         }
 }
