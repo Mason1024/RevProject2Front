@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatListModule } from '@angular/material/list';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatButtonModule} from '@angular/material/button';
 
 import { JwPaginationComponent} from 'jw-angular-pagination';
 import { AppRoutingModule } from './app-routing.module';
@@ -57,7 +59,9 @@ import { PostingFormComponent } from './components/userHub/posting-form/posting-
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatListModule
+    MatListModule,
+    MatFormFieldModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
