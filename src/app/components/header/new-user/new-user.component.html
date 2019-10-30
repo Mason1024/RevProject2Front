@@ -1,26 +1,19 @@
-<form>
-    <div>
-        <label for="username">Username</label>
+<div class="form">
+    <mat-form-field>
         <input [(ngModel)]="username" name="username" type="text" placeholder="Username">
-    </div>
-    <div>
-        <label for="password">Password</label>
+    </mat-form-field>
+    <mat-form-field>
         <input [(ngModel)]="password" name="password" type="password" placeholder="Password">
-	</div>
-	<div>
-        <label for="confirmPassword">Password</label>
-        <input [(ngModel)]="confirmPassword" name="confirmPassword" type="password"" placeholder="Password">
-	</div>
-	<div>
-        <label for="email">Email</label>
-        <input [(ngModel)]="email" name="email" type="email"" placeholder="Email">
-	</div>
-	<div>
-        <label for="phone">Phone</label>
+    </mat-form-field>
+    <mat-form-field>
+        <input [(ngModel)]="confirmPassword" name="confirmPassword" type="password"" placeholder=" Password">
+    </mat-form-field>
+    <mat-form-field>
+        <input [(ngModel)]="email" name="email" type="email"" placeholder=" Email">
+    </mat-form-field>
+    <mat-form-field>
         <input [(ngModel)]="phone" name="phone" type="tel" placeholder="Phone">
-	</div>
-    <div>
-        <button (click)="validate()" type="submit">Sign Up</button>
-        <button (click)="back()">Back</button>
-    </div>
-</form>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="validate()" type="submit">Sign Up</button>
+    <button mat-raised-button color="primary" (click)="home()">Home</button>
+</div>
