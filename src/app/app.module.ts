@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatListModule } from '@angular/material/list';
 
+import { JwPaginationComponent} from 'jw-angular-pagination';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -51,6 +52,7 @@ import { PostingFormComponent } from './components/userHub/posting-form/posting-
     CategoriesDropdownComponent,
     CategoryComponent,
     FooterComponent,
+    JwPaginationComponent,
     UserPostingContainerComponent,
     UserPostingComponent,
     PostingFormComponent
