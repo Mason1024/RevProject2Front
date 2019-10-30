@@ -1,14 +1,10 @@
-<form>
-    <div>
-        <label for="username">Username</label>
-        <input [(ngModel)]="username" name="username" type="text" placeholder="Username">
-    </div>
-    <div>
-        <label for="password">Password</label>
+<div class="form">
+    <mat-form-field>
+        <input [(ngModel)]="username" name="username" type="text" placeholder="Username">4
+    </mat-form-field>
+    <mat-form-field>
         <input [(ngModel)]="password" name="password" type="password" placeholder="Password">
-    </div>
-    <div>
-        <button (click)="validate()" type="submit">Login</button>
-        <button (click)="back()">Back</button>
-    </div>
-</form>
+    </mat-form-field>
+    <button mat-raised-button (click)="validate()" type="submit">Login</button>
+    <button mat-raised-button (click)="home()">Home</button>
+</div>
