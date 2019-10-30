@@ -3,6 +3,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatListModule } from '@angular/material/list';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatButtonModule} from '@angular/material/button';
+import {MatMenuModule} from '@angular/material/menu';
+
 import { JwPaginationComponent} from 'jw-angular-pagination';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -23,6 +27,7 @@ import { UserPostingContainerComponent } from './components/userHub/user-posting
 import { UserPostingComponent } from './components/userHub/user-posting/user-posting.component';
 import { PostingFormComponent } from './components/userHub/posting-form/posting-form.component';
 
+
 //market
 import { MarketContainerComponent } from './components/market/market-container/market-container.component';
 import { CategoriesDropdownComponent } from './components/market/categories-dropdown/categories-dropdown.component';
@@ -42,9 +47,6 @@ import { FooterComponent } from './components/footer/footer.component';
     LoginComponent,
     NewUserComponent,
     UserHubComponent,
-    NewPostComponent,
-    EditPostComponent,
-    DeletePostComponent,
     MarketContainerComponent,
     PostingContainerComponent,
     PostingComponent,
@@ -62,7 +64,10 @@ import { FooterComponent } from './components/footer/footer.component';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatListModule
+    MatListModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
