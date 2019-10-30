@@ -16,8 +16,6 @@ import { NewUserComponent } from './components/header/new-user/new-user.componen
 //user hub
 import { UserHubComponent } from './components/userHub/user-hub/user-hub.component';
 import { NewPostComponent } from './components/userHub/new-post/new-post.component';
-import { EditPostComponent } from './components/userHub/edit-post/edit-post.component';
-import { DeletePostComponent } from './components/userHub/delete-post/delete-post.component';
 
 //market
 import { MarketContainerComponent } from './components/market/market-container/market-container.component';
@@ -44,8 +42,6 @@ import { PostingFormComponent } from './components/userHub/posting-form/posting-
     NewUserComponent,
     UserHubComponent,
     NewPostComponent,
-    EditPostComponent,
-    DeletePostComponent,
     MarketContainerComponent,
     PostingContainerComponent,
     PostingComponent,
