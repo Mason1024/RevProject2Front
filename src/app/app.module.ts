@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatListModule } from '@angular/material/list';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
+import {MatMenuModule} from '@angular/material/menu';
 
 import { JwPaginationComponent} from 'jw-angular-pagination';
 import { AppRoutingModule } from './app-routing.module';
@@ -61,7 +62,8 @@ import { PostingFormComponent } from './components/userHub/posting-form/posting-
     BrowserAnimationsModule,
     MatListModule,
     MatFormFieldModule,
-    MatButtonModule
+    MatButtonModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
