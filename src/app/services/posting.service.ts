@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Posting } from '../models/posting';
 
 @Injectable({
@@ -31,8 +31,8 @@ export class PostingService {
     return response;  
   }
 
-  getAllPostings():Promise<Posting[]>{
-    let response:Promise<Posting[]> = this.http.get<Posting[]>(`${this.baseUrl}postings`).toPromise();
+  getAllPostings():Promise<any>{
+    let response:Promise<any> = this.http.get(`${this.baseUrl}postings`).toPromise();
     return response;  
   }
   
