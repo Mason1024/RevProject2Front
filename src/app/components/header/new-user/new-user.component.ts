@@ -3,6 +3,7 @@ import { LoginService } from 'src/app/services/login.service';
 import { CurrentUserService } from 'src/app/services/current-user.service';
 import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/models/user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-user',
@@ -20,7 +21,8 @@ export class NewUserComponent implements OnInit {
   constructor(
     private loginService:LoginService,
     private currentUser:CurrentUserService,
-    private userService:UserService
+    private userService:UserService,
+    private router:Router
   ) { }
 
   ngOnInit() {
@@ -47,12 +49,12 @@ export class NewUserComponent implements OnInit {
           // Check if user creation was successful
           if (newUser != null) {
             this.currentUser.setUser(newUser);
-            // Success, Route to home
+            this.router.navigate(["home"]);
           }
         }
     }
   }
-  back() {
-    // Route to home
+  home() {
+    this.router.navigate(["home"]);
   }
 }
