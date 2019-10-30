@@ -15,17 +15,21 @@ export class PostingContainerComponent implements OnInit {
   ) { }
   
   postings:Array<Posting>;  
-  pageOfPostings:Array<Posting>;
+  // pageOfPostings:Array<Posting>;
 
   ngOnInit() {
 
     this.postingService.getAllPostings().then((info)=>{
-      this.postings = info; })
+      console.log(`Data in: ${info}`);
+      this.postings = info; 
+    }).catch((info)=>{
+        console.log(`Error: ${info}`);
+    })
 
   }
 
-  onPageChange(pageOfPostings:Array<Posting>){
-    this.pageOfPostings = pageOfPostings;
-  }
+  // onPageChange(pageOfPostings:Array<Posting>){
+  //   this.pageOfPostings = pageOfPostings;
+  // }
 
 }
