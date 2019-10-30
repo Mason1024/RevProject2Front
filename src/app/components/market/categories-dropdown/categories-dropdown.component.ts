@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Category } from '../../../models/category';
 
+/**
+ * @title Categories
+ */
 @Component({
   selector: 'app-categories-dropdown',
   templateUrl: './categories-dropdown.component.html',
