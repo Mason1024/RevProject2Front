@@ -2,8 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { MatSliderModule } from '@angular/material/slider';
-import {MatListModule, MatNavList} from '@angular/material/list';
+import { MatListModule } from '@angular/material/list';
 
 import { JwPaginationComponent} from 'jw-angular-pagination';
 import { AppRoutingModule } from './app-routing.module';
@@ -31,6 +30,9 @@ import { PostingComponent } from './components/market/posting/posting.component'
 //footer
 import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UserPostingContainerComponent } from './components/userHub/user-posting-container/user-posting-container.component';
+import { UserPostingComponent } from './components/userHub/user-posting/user-posting.component';
+import { PostingFormComponent } from './components/userHub/posting-form/posting-form.component';
 
 
 @NgModule({
@@ -50,7 +52,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CategoriesDropdownComponent,
     CategoryComponent,
     FooterComponent,
-    JwPaginationComponent
+    JwPaginationComponent,
+    UserPostingContainerComponent,
+    UserPostingComponent,
+    PostingFormComponent
   ],
   imports: [
     BrowserModule,
@@ -58,8 +63,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatSliderModule,
-    MatNavList
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
