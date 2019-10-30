@@ -12,17 +12,17 @@ export class PostingService {
   constructor(private http:HttpClient) { }
 
   getPostingById(id:number):Promise<Posting>{
-    let response:Promise<Posting> = this.http.get<Posting>(`${this.baseUrl}postings/${id}/`).toPromise();
+    let response:Promise<Posting> = this.http.get<Posting>(`${this.baseUrl}postings/${id}`).toPromise();
     return response;
   }
 
   getAllPostingsByUserId(id:number):Promise<Posting[]>{
-    let response:Promise<Posting[]> = this.http.get<Posting[]>(`${this.baseUrl}postings/allbyuser/${id}/`).toPromise();
+    let response:Promise<Posting[]> = this.http.get<Posting[]>(`${this.baseUrl}postings/allbyuser/${id}`).toPromise();
     return response;  
   }
 
   getAllPostingsByEndingSoonest():Promise<Posting[]>{
-    let response:Promise<Posting[]> = this.http.get<Posting[]>(`${this.baseUrl}postings/ending/`).toPromise();
+    let response:Promise<Posting[]> = this.http.get<Posting[]>(`${this.baseUrl}postings/ending`).toPromise();
     return response;  
   }
 
@@ -32,17 +32,17 @@ export class PostingService {
   }
 
   getAllPostings():Promise<Posting[]>{
-    let response:Promise<Posting[]> = this.http.get<Posting[]>(`${this.baseUrl}postings/`).toPromise();
+    let response:Promise<Posting[]> = this.http.get<Posting[]>(`${this.baseUrl}postings`).toPromise();
     return response;  
   }
   
   createPosting(posting:Posting):Promise<Posting>{
-    let request:Promise<Posting> = this.http.post<Posting>(`${this.baseUrl}postings/`,posting).toPromise();
+    let request:Promise<Posting> = this.http.post<Posting>(`${this.baseUrl}postings`,posting).toPromise();
     return request;
   }
 
   updatePosting(posting:Posting):Promise<Posting>{
-    let request:Promise<Posting> = this.http.put<Posting>(`${this.baseUrl}postings/,`,posting).toPromise();
+    let request:Promise<Posting> = this.http.put<Posting>(`${this.baseUrl}postings,`,posting).toPromise();
     return request;
   }
 

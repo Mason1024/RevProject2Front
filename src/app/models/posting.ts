@@ -1,21 +1,23 @@
+import { User } from "./user";
+
 export class Posting{
 
     id:number;
-    user:number;
+    user:User;
     description:string;
     category:string;
     location:string;
     initDate:number;
     endDate:number;
 
-    constructor(id:number,u_id:number,description:string,category:string,
-        location:string,init_date:number,end_date:number){
+    constructor(id:number,user:User,description:string,category:string,
+        location:string,initDate:number,endDate:number){
             this.id = id;
-            this.id = id;
+            this.user = user;
             this.description = description;
             this.category = category;
             this.location = location;
-            this.initDate = init_date;
-            this.endDate = end_date;
+            this.initDate = initDate;
+            this.endDate = endDate;
         }
 }
