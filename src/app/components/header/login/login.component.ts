@@ -4,6 +4,9 @@ import { CurrentUserService } from '../../../services/current-user.service';
 import { User } from '../../../models/user';
 import { Router } from '@angular/router';
 
+/**
+ * @title Login
+ */
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -23,8 +26,8 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  back():void {
-    // Route to home
+  home():void {
+    this.router.navigate(["home"]);
   }
 
   validate():void{
