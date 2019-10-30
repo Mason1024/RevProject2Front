@@ -20,6 +20,7 @@ export class NewUserComponent implements OnInit {
   constructor(
     private loginService:LoginService,
     private currentUser:CurrentUserService,
+    private userService:UserService
   ) { }
 
   ngOnInit() {
@@ -35,12 +36,17 @@ export class NewUserComponent implements OnInit {
         // Make sure passwords are equal
         if (this.password === this.confirmPassword) {
           let newUser = new User(0, this.username, this.password, this.email, this.phone, null);
-          // TODO: Create user and assign to newUser
+          
+          //Create user and assign to newUser
+          this.userService.createUser(newUser).then(info => {
+            newUser = info;
+          }).catch (response => {
+            console.log("Error");
+          });
+          
           // Check if user creation was successful
-          if (newUser == null) {
-            // Throw error
-          }
-          else {
+          if (newUser != null) {
+            this.currentUser.setUser(newUser);
             // Success, Route to home
           }
         }
