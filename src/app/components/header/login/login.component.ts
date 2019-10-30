@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
   }
 
   home():void {
-    this.router.navgate(["home"]);
+    this.router.navigate(["home"]);
   }
 
   validate():void{
