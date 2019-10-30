@@ -12,4 +12,9 @@ export class UserHubComponent implements OnInit {
   ngOnInit() {
   }
 
+
+  createPost(){
+    document.getElementById("postingForm").style.display = "block";
+  }
+
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user';
 import { CurrentUserService } from 'src/app/services/current-user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,10 @@ export class HeaderComponent implements OnInit {
 
   user:User;
 
-  constructor(private uService:CurrentUserService) { }
+  constructor(
+    private uService:CurrentUserService,
+    private router:Router
+    ) { }
 
   ngOnInit() { // May need to switch to obversable method
     this.user = this.uService.getStaticUser();
@@ -23,7 +27,7 @@ export class HeaderComponent implements OnInit {
 
   logout(user:User):void {
     user = null;
-    // Route to home
+    this.router.navigate(["home"]);
   }
 
   login():void {
