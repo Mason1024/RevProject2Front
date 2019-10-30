@@ -1,6 +1,5 @@
-<div>
-
-    <table *ngFor = 'let post of postings' (click)="goToPost(post.id)">
+<div class='flex-container'>
+    <table *ngFor = 'let post of postings'>
         <tr>
             <td>{{post.title}}</td>
         </tr>
@@ -8,11 +7,12 @@
             <td>{{post.category}}</td>
         </tr>
         <tr>
-            <td><img src={{post.imageUrl}} alt="error" width = "300px" height = "300px"></td>
+            <td><img src={{post.imageUrl}} alt="No Image" width = "300px" height = "300px"></td>
         </tr>
         <tr><td>{{post.description}}</td></tr>
         <tr><td>{{post.initDate}}</td></tr>
         <tr><td>{{post.endDate}}</td></tr>
+        <tr><td>Seller {{post.user.username}}</td></tr>
         <tr><td>{{post.user.email}}</td></tr>
         <tr><td>{{post.user.phoneNumber}}</td></tr>
     </table>

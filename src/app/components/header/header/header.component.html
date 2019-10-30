@@ -1,10 +1,10 @@
 <!-- User is logged in -->
-<div *ngIf="user != undefined">
+<div *ngIf="user == undefined">
 	<button (click)="hub(user)">User Hub</button>
 	<button (click)="logout(user)">Logout</button>
 </div>
 <!-- User is not logged in -->
-<div *ngIf="user == undefined">
+<div *ngIf="user != undefined">
 	<button (click)="login()">Login</button>
 	<button (click)="register()">Register</button>
 </div>
