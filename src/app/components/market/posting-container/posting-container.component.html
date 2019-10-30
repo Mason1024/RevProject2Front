@@ -1,1 +1,15 @@
-<p>posting-container works!</p>
+<div>
+
+    <table *ngFor = 'let postings of pageOfPostings' (click)="goToPost(post.id)">
+        <tr>
+            <td>{{post.title}}</td>
+        </tr>
+        <tr>
+            <td><img src={{post.imageUrl}} alt="error.png" width = "300px" height = "300px"></td>
+        </tr>
+    </table>
+
+    <div>
+    <jw-pagination postings[]="items" (pageChange)="onPageChange($event)"></jw-pagination>
+    </div>
+</div>
