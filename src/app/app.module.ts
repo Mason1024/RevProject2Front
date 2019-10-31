@@ -9,6 +9,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatSelectModule} from '@angular/material/select';
 import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatInput} from '@angular/material/input';
 
 import { JwPaginationComponent} from 'jw-angular-pagination';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -70,7 +71,8 @@ import { FooterComponent } from './components/footer/footer.component';
     MatMenuModule,
     MatSelectModule,
     MatCardModule,
-    MatDividerModule
+    MatDividerModule,
+    MatInput
   ],
   providers: [],
   bootstrap: [AppComponent]
