@@ -13,13 +13,17 @@ export class HeaderComponent implements OnInit {
   user:User;
 
   constructor(
-    private uService:CurrentUserService,
+    private currentUser:CurrentUserService,
     private router:Router
     ) { }
 
   ngOnInit() { // May need to switch to obversable method
-    this.user = this.uService.getStaticUser();
+    this.currentUser.currentUser$.subscribe(data =>{ this.user = data});
   }
+
+  // CurrentUserService.data.subscribe(data:User => {
+  //   this.user = data;
+  // })
 
   hub(user:User):void {
       // Route to user-hub
@@ -32,7 +36,7 @@ export class HeaderComponent implements OnInit {
   }
 
   logout(user:User):void {
-    user = null;
+    this.currentUser.nullCurrentUser();
     this.router.navigate(["home"]);
   }
 
