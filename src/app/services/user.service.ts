@@ -30,12 +30,12 @@ export class UserService {
   }
 
   updateUser(user:User):Promise<User> {
-    let request:Promise<User> = this.http.put<User>(`${this.baseUrl}users/`, user).toPromise();
-    return request;
+    let response:Promise<User> = this.http.put<User>(`${this.baseUrl}users/`, user).toPromise();
+    return response;
   }
 
   deleteUser(id:number):Promise<boolean> {
-    let request:Promise<boolean> = this.http.delete<boolean>(`${this.baseUrl}users/${id}/`).toPromise();
-    return request;
+    let response:Promise<boolean> = this.http.delete<boolean>(`${this.baseUrl}users/${id}/`).toPromise();
+    return response;
   }
 }
