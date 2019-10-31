@@ -30,7 +30,7 @@ export class UserService {
   }
 
   login(username:string, password:string):Promise<User> {
-    let promise = this.http.post<User>(`${this.baseUrl}login`, {username, password}).toPromise();
+    let promise = this.http.post<User>(`${this.baseUrl}login/`, {username, password}).toPromise();
     return promise;
   }
 
