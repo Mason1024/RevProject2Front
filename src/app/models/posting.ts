@@ -10,10 +10,10 @@ export class Posting{
     initDate:number;
     endDate:number;
     title:string;
-    imageUrl:string;
+    img:string;
 
     constructor(id:number,user:User,description:string,category:string,
-        location:string,initDate:number,endDate:number, title:string, imageUrl:string){
+        location:string,initDate:number,endDate:number, title:string, img:string){
             this.id = id;
             this.user = user;
             this.description = description;
@@ -22,6 +22,6 @@ export class Posting{
             this.initDate = initDate;
             this.endDate = endDate;
             this.title = title;
-            this.imageUrl = imageUrl
+            this.img = img
         }
 }
