@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CategoryService } from 'src/app/services/category.service';
 
 @Component({
   selector: 'app-posting-form',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostingFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private CategoryService:CategoryService ) { }
 
   ngOnInit() {
   }
