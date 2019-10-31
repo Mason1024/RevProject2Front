@@ -1,4 +1,8 @@
-<button mat-button [matMenuTriggerFor]="categories">Categories</button>
-<mat-menu #menu = "matMenu">
-	<button (click)="openCategoryPage(category)" mat-menu-item *ngFor= "let category of categories">{{category}}</button>
-</mat-menu>
+<mat-form-field>
+  <mat-label>Categories</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let category of categories" [value]="category">
+      {{category}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
