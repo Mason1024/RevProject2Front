@@ -14,35 +14,35 @@ export class UserService {
 
   // Create
   createUser(user:User):Promise<User> {
-    let promise:Promise<User> = this.http.post<User>(`${this.baseUrl}users/`, user).toPromise();
+    let promise:Promise<User> = this.http.post<User>(`${this.baseUrl}users`, user).toPromise();
     return promise;
   }
 
   // Read
   getUserById(id:number):Promise<User> {
-    let promise:Promise<User> = this.http.get<User>(`${this.baseUrl}users/${id}/`).toPromise();
+    let promise:Promise<User> = this.http.get<User>(`${this.baseUrl}users/${id}`).toPromise();
     return promise;
   }
 
   getAllUsers():Promise<User[]> {
-    let promise:Promise<User[]> = this.http.get<User[]>(`${this.baseUrl}users/`).toPromise();
+    let promise:Promise<User[]> = this.http.get<User[]>(`${this.baseUrl}users`).toPromise();
     return promise;
   }
 
   login(username:string, password:string):Promise<User> {
-    let promise = this.http.post<User>(`${this.baseUrl}login/`, {username, password}).toPromise();
+    let promise = this.http.post<User>(`${this.baseUrl}login`, {username, password}).toPromise();
     return promise;
   }
 
   // Update
   updateUser(user:User):Promise<User> {
-    let promise:Promise<User> = this.http.put<User>(`${this.baseUrl}users/`, user).toPromise();
+    let promise:Promise<User> = this.http.put<User>(`${this.baseUrl}users`, user).toPromise();
     return promise;
   }
 
   // Delete
   deleteUser(id:number):Promise<boolean> {
-    let promise:Promise<boolean> = this.http.delete<boolean>(`${this.baseUrl}users/${id}/`).toPromise();
+    let promise:Promise<boolean> = this.http.delete<boolean>(`${this.baseUrl}users/${id}`).toPromise();
     return promise;
   }
 }
