@@ -9,7 +9,7 @@ export class CurrentUserService {
 
   constructor() { }
 
-  private currentUser = new BehaviorSubject(new User(undefined, undefined, undefined, undefined, undefined, undefined));
+  private currentUser = new BehaviorSubject(undefined);
   private observeCurrentUser = this.currentUser.asObservable();
 
   setUser(newUser:User){

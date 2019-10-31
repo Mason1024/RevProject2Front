@@ -1,11 +1,11 @@
 <!-- User is logged in -->
-<div *ngIf="user == undefined">
+<div *ngIf="user != undefined">
 	<button mat-raised-button color="primary" (click)="hub(user)">User Hub</button>
 	<button mat-raised-button color="primary" (click)="market(user)">Market</button>
 	<button mat-raised-button color="primary" (click)="logout(user)">Logout</button>
 </div>
 <!-- User is not logged in -->
-<div *ngIf="user != undefined">
+<div *ngIf="user == undefined">
 	<button mat-raised-button color="primary" (click)="login()">Login</button>
 	<button mat-raised-button color="primary" (click)="register()">Register</button>
 </div>
