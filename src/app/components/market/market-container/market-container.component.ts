@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CategoryService } from 'src/app/services/category.service';
 
 @Component({
   selector: 'app-market-container',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MarketContainerComponent implements OnInit {
 
-  constructor() { }
+  searchTerm:string;
+  category:string;
+
+  categories:Array<string>;
+
+  constructor(private categoryService:CategoryService) { }
 
   ngOnInit() {
+    this.categories = this.categoryService.getAllCategories();
   }
 
 }

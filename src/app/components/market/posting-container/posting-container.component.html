@@ -1,21 +1,6 @@
 <div class='flex-container'>
-    <!-- <table *ngFor = 'let post of postings'>
-        <tr>
-            <td>{{post.title}}</td>
-        </tr>
-        <tr>
-            <td>{{post.category}}</td>
-        </tr>
-        <tr>
-            <td><img src='{{post.img}}' alt="No Image" width = "300px" height = "300px"></td>
-        </tr>
-        <tr><td>{{post.description}}</td></tr>
-        <tr><td>{{post.initDate}}</td></tr>
-        <tr><td>{{post.endDate}}</td></tr>
-        <tr><td>Seller {{post.user.username}}</td></tr>
-        <tr><td>{{post.user.email}}</td></tr>
-        <tr><td>{{post.user.phoneNumber}}</td></tr>
-    </table> -->
+    {{searchVal}}
+    {{catVal}}
     <mat-card *ngFor="let post of postings">
         <mat-card-header>
             <mat-card-title>{{post.title}}</mat-card-title>
@@ -35,8 +20,5 @@
             </table>
         </mat-card-content>
     </mat-card>
-
-    
-
 </div>
 
