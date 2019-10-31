@@ -1,19 +1,43 @@
 <div class="form">
-    <mat-form-field>
-        <input [(ngModel)]="username" name="username" type="text" placeholder="Username">
-    </mat-form-field>
-    <mat-form-field>
-        <input [(ngModel)]="password" name="password" type="password" placeholder="Password">
-    </mat-form-field>
-    <mat-form-field>
-        <input [(ngModel)]="confirmPassword" name="confirmPassword" type="password"" placeholder=" Password">
-    </mat-form-field>
-    <mat-form-field>
-        <input [(ngModel)]="email" name="email" type="email"" placeholder=" Email">
-    </mat-form-field>
-    <mat-form-field>
-        <input [(ngModel)]="phone" name="phone" type="tel" placeholder="Phone">
-    </mat-form-field>
-    <button mat-raised-button color="primary" (click)="validate()" type="submit">Sign Up</button>
-    <button mat-raised-button color="primary" (click)="home()">Home</button>
+    <table style="margin: auto;">
+        <tr>
+            <td>
+                <mat-form-field>
+                    <input [(ngModel)]="username" name="username" type="text" placeholder="Username">
+                </mat-form-field>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <mat-form-field>
+                    <input [(ngModel)]="password" name="password" type="password" placeholder="Password">
+                </mat-form-field>
+            </td>
+            <td>
+                <mat-form-field>
+                    <input [(ngModel)]="confirmPassword" name="confirmPassword" type="password" placeholder="Confirm Password">
+                </mat-form-field>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <mat-form-field>
+                    <input [(ngModel)]="email" name="email" type="email" placeholder=" Email">
+                </mat-form-field>
+            </td>
+            <td>
+                <mat-form-field>
+                    <input [(ngModel)]="phone" name="phone" type="tel" placeholder="Phone">
+                </mat-form-field>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button mat-raised-button color="primary" (click)="validate()" type="submit">Sign Up</button>
+            </td>
+            <td>
+                <button mat-raised-button color="primary" (click)="home()">Home</button>
+            </td>
+        </tr>
+    </table>
 </div>

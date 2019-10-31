@@ -23,6 +23,12 @@ export class HeaderComponent implements OnInit {
 
   hub(user:User):void {
       // Route to user-hub
+      this.router.navigate(["userHub"]);
+  }
+
+  market(user:User):void{
+    // Route to marketplace
+    this.router.navigate(["market"])
   }
 
   logout(user:User):void {
@@ -32,10 +38,12 @@ export class HeaderComponent implements OnInit {
 
   login():void {
     // Route to login
+    this.router.navigate(["login"]);
   }
 
   register():void {
     // Route to new-user
+    this.router.navigate(["newUser"])
   }
 
 }

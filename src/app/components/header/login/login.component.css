@@ -1,0 +1,12 @@
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.mat-form-field-wrapper{
+    padding-bottom: 0;
+}
+  
+  /* .form > * {
+    width: 100%;
+  } */
