@@ -61,6 +61,7 @@ import { PostingComponent } from './components/market/posting/posting.component'
 
 //footer
 import { FooterComponent } from './components/footer/footer.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -78,7 +79,8 @@ import { FooterComponent } from './components/footer/footer.component';
     FooterComponent,
     UserPostingContainerComponent,
     UserPostingComponent,
-    PostingFormComponent
+    PostingFormComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

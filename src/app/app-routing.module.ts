@@ -4,6 +4,7 @@ import { MarketContainerComponent } from './components/market/market-container/m
 import { UserHubComponent } from './components/userHub/user-hub/user-hub.component';
 import { LoginComponent } from './components/header/login/login.component';
 import { NewUserComponent } from './components/header/new-user/new-user.component';
+import { SearchComponent } from './components/market/search/search.component';
 
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   {path:"userHub",component:UserHubComponent},
   {path:"login",component:LoginComponent},
   {path:"newUser",component:NewUserComponent},
+  {path:"search",component:SearchComponent},
   {path:"**",component:MarketContainerComponent}
 ];
 
