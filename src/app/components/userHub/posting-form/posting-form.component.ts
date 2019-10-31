@@ -13,3 +13,12 @@ export class PostingFormComponent implements OnInit {
   }
 
 }
+
+
+// id:number;
+// user:number;
+// description:string;
+// category:string;
+// location:string;
+// initDate:number;
+// endDate:number;

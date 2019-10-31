@@ -10,6 +10,10 @@ export class CategoriesDropdownComponent  {
 
   constructor() { }
 
+  openCategoryPage(name:string) {
+    // Route to category page
+  } 
+
   furniture:Category = new Category(1, "Furniture");
   vehicleParts:Category = new Category(2, "Vehicle Parts");
   misc:Category = new Category(3, "miscellaneous");
