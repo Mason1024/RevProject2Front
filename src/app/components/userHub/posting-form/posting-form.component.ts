@@ -30,11 +30,12 @@ export class PostingFormComponent implements OnInit {
   }
 
   createPost(){
-   let post:Posting = new Posting(0, this.user.id, 
+   let post:Posting = new Posting(0, this.user, 
     document.getElementById("description").value, 
     document.getElementById("categoriesDropdown").value, 
     document.getElementById("location").value,
-    0,document.getElementById("endDate"), 
+    0,
+    document.getElementById("endDate").value, 
     document.getElementById("title").value, 
     "");
     this.postingService.createPosting(post);
