@@ -36,8 +36,8 @@ export class PostingService {
     return promise;  
   }
 
-  getAllPostings():Promise<any>{
-    let promise:Promise<any> = this.http.get(`${this.baseUrl}postings`).toPromise();
+  getAllPostings():Promise<Posting[]>{
+    let promise:Promise<Posting[]> = this.http.get(`${this.baseUrl}postings`).toPromise();
     return promise;  
   }
   
