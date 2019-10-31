@@ -57,5 +57,9 @@ export class NewUserComponent implements OnInit {
       this.hasError=true;
     }
   }
+
+  home(){
+    this.router.navigate(["userHub"]);
+  }
 }
 
