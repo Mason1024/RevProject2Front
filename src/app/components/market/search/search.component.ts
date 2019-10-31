@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PostingService } from 'src/app/services/posting.service';
+import { Posting } from 'src/app/models/posting';
 
 @Component({
   selector: 'app-search',
@@ -7,12 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent {
 
-  constructor() { }
+  constructor(
+    private postingService: PostingService
+  ) { }
 
-  searchTerm:string = "";
+  // searchTerm:string = "";
+  
+  search():void {
+    this.getPostings();
+   }
+  postings:Posting[];  
 
-  search(searchTerm:string):void {
-    // Search logic
+  ngOnInit() {
+    
   }
+
+  getPostings(){
+    this.postingService.getAllPostings().then((info)=>{
+      this.postings = info; 
+    })
+  }
+
 
 }

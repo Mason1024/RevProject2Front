@@ -20,7 +20,7 @@ export class PostingService {
     let promise:Promise<Posting[]> = this.http.get<Posting[]>(`${this.baseUrl}postings/allbyuser/${id}`).toPromise();
     return promise;  
   }
-
+  
   getAllPostingsByCategory(category:string):Promise<Posting[]>{
     let response:Promise<Posting[]> = this.http.get<Posting[]>(`${this.baseUrl}postings/allbycategory/${category}`).toPromise();
     return response
