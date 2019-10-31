@@ -37,7 +37,7 @@ export class NewUserComponent implements OnInit {
       (this.email.length > 0 || this.phone.length > 0)) {
         // Make sure passwords are equal
         if (this.password === this.confirmPassword) {
-          let newUser = new User(0, this.username, this.password, this.email, this.phone, null);
+          let newUser = new User(0, this.username, this.password, this.email, this.phone);
           
           //Create user and assign to newUser
           this.userService.createUser(newUser).then(info => {
@@ -48,7 +48,7 @@ export class NewUserComponent implements OnInit {
           
           // Check if user creation was successful
           if (newUser != null) {
-            this.currentUser.setUser(newUser);
+            this.currentUser.updateCurrentUser(newUser);
             this.router.navigate(["home"]);
           }
         }
