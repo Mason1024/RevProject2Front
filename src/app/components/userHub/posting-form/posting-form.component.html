@@ -1,21 +1,25 @@
 
     <!-- title:string; -->
+    <div>
+        <button onclick="createPost()">Create Post</button></div>
 <div>
-<h4>Posting title</h4>
+    <table>
+        <tr>
+            <th>Posting title></th><th>Category</th><th>Location</th><th>End date</th>
+        </tr>
+        <tr><td><input type="text" id="title"></td>
+            <td><select id="categoriesDropdown"></select></td>
+            <td><input type="text" id="location"></td>
+            <td><input type="date" id="endDate"></td>
+        </tr>
+</table>
 </div>
 <div>
-<input type="text" id="title">
+    <h4>Description</h4>
 </div>
 <div>
-    <h4>Category</h4>
-</div>
-<div>
-    <select id="categoriesDropdown"></select>
+    <input type="text" id="description">
 </div>
 
 
-
-    description:string;
-    category:string;
-    location:string;
-    endDate:number;
+    
