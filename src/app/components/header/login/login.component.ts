@@ -35,12 +35,12 @@ export class LoginComponent implements OnInit {
     this.loginService.validate(this.username,this.password).subscribe(
       resp=>{
         let respJSON = JSON.parse(resp.body);
-        if(resp.status == 202){
+        if(resp.status == 200){
           //user successfully logged in
-          let newUser = new User(respJSON["u_id"], respJSON["username"], respJSON["password"], respJSON["email"], respJSON["phone_number"],respJSON["postings"]);
-          this.currentUser.setUser(newUser);
+          let newUser = new User(respJSON["id"], respJSON["username"], respJSON["password"], respJSON["email"], respJSON["phoneNumber"]);
+          this.currentUser.updateCurrentUser(newUser);
+          this.router.navigate(["userHub"]);
         }
-        this.router.navigate(["home"]);
       },
       err=>{
         console.log("Error, failed login");

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { CurrentUserService } from './services/current-user.service';
 
 import {MatCheckboxModule} from '@angular/material';
 import {MatButtonModule} from '@angular/material';
@@ -117,7 +118,9 @@ import { FooterComponent } from './components/footer/footer.component';
     MatSortModule,
     MatPaginatorModule
   ],
-  providers: [],
+  providers: [
+    CurrentUserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

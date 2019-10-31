@@ -6,14 +6,16 @@ export class User {
 	password:string;
 	email:string;
 	phoneNumber:string;
-	postings:Posting[]; // Array of post Ids
 
-	constructor(id:number, username:string, password:string, email:string, phone_number:string, postings:Posting[]) {
+	constructor(id:number, username:string, password:string, email:string, phoneNumber:string) {
 		this.id = id;
 		this.username = username;
 		this.password = password;
 		this.email = email;
-		this.phoneNumber = phone_number;
-		this.postings = postings;
+		this.phoneNumber = phoneNumber;
+	}
+
+	toString():string{
+		return `ID[${this.id}], Username[${this.username}], Email[${this.email}], Phone[${this.phoneNumber}]`;
 	}
 }

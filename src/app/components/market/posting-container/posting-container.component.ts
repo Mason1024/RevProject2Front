@@ -21,7 +21,6 @@ export class PostingContainerComponent implements OnInit {
 
   getPostings(){
     this.postingService.getAllPostings().then((info)=>{
-      console.log(`Data in: ${info}`);
       this.postings = info; 
     })
   }
