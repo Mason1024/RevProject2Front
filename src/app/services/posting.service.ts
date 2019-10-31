@@ -12,13 +12,13 @@ export class PostingService {
   constructor(private http:HttpClient) { }
 
   getPostingById(id:number):Promise<Posting>{
-    let response:Promise<Posting> = this.http.get<Posting>(`${this.baseUrl}postings/${id}`).toPromise();
-    return response;
+    let promise:Promise<Posting> = this.http.get<Posting>(`${this.baseUrl}postings/${id}`).toPromise();
+    return promise;
   }
 
   getAllPostingsByUserId(id:number):Promise<Posting[]>{
-    let response:Promise<Posting[]> = this.http.get<Posting[]>(`${this.baseUrl}postings/allbyuser/${id}`).toPromise();
-    return response;  
+    let promise:Promise<Posting[]> = this.http.get<Posting[]>(`${this.baseUrl}postings/allbyuser/${id}`).toPromise();
+    return promise;  
   }
 
   getAllPostingsByCategory(category:string):Promise<Posting[]>{
@@ -27,32 +27,32 @@ export class PostingService {
   }
 
   getAllPostingsByEndingSoonest():Promise<Posting[]>{
-    let response:Promise<Posting[]> = this.http.get<Posting[]>(`${this.baseUrl}postings/ending`).toPromise();
-    return response;  
+    let promise:Promise<Posting[]> = this.http.get<Posting[]>(`${this.baseUrl}postings/ending`).toPromise();
+    return promise;  
   }
 
   getNewestByRange(lowInd:number,upInd:number):Promise<Posting[]>{
-    let response:Promise<Posting[]> = this.http.get<Posting[]>(`${this.baseUrl}postings/range/${lowInd}/${upInd}`).toPromise();
-    return response;  
+    let promise:Promise<Posting[]> = this.http.get<Posting[]>(`${this.baseUrl}postings/range/${lowInd}/${upInd}`).toPromise();
+    return promise;  
   }
 
   getAllPostings():Promise<any>{
-    let response:Promise<any> = this.http.get(`${this.baseUrl}postings`).toPromise();
-    return response;  
+    let promise:Promise<any> = this.http.get(`${this.baseUrl}postings`).toPromise();
+    return promise;  
   }
   
   createPosting(posting:Posting):Promise<Posting>{
-    let response:Promise<Posting> = this.http.post<Posting>(`${this.baseUrl}postings`,posting).toPromise();
-    return response;
+    let promise:Promise<Posting> = this.http.post<Posting>(`${this.baseUrl}postings`,posting).toPromise();
+    return promise;
   }
 
   updatePosting(posting:Posting):Promise<Posting>{
-    let response:Promise<Posting> = this.http.put<Posting>(`${this.baseUrl}postings,`,posting).toPromise();
-    return response;
+    let promise:Promise<Posting> = this.http.put<Posting>(`${this.baseUrl}postings,`,posting).toPromise();
+    return promise;
   }
 
   deletePosting(id:number):Promise<boolean>{
-    let response:Promise<boolean> = this.http.delete<boolean>(`${this.baseUrl}postings/${id}`).toPromise();
-    return response;
+    let promise:Promise<boolean> = this.http.delete<boolean>(`${this.baseUrl}postings/${id}`).toPromise();
+    return promise;
   }
 }
