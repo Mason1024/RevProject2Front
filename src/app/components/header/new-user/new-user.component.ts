@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginService } from 'src/app/services/login.service';
 import { CurrentUserService } from 'src/app/services/current-user.service';
 import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/models/user';
 import { Router } from '@angular/router';
+import { Validators, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-new-user',
@@ -12,14 +12,15 @@ import { Router } from '@angular/router';
 })
 export class NewUserComponent implements OnInit {
 
-  username:string;
-  password:string;
-  confirmPassword:string;
-  email:string;
-  phone:string;
+  username:string="";
+  password:string="";
+  confirmPassword:string="";
+  email:string="";
+  phone:string="";
+
+  hasError:boolean=false;
 
   constructor(
-    private loginService:LoginService,
     private currentUser:CurrentUserService,
     private userService:UserService,
     private router:Router
@@ -49,12 +50,12 @@ export class NewUserComponent implements OnInit {
           // Check if user creation was successful
           if (newUser != null) {
             this.currentUser.updateCurrentUser(newUser);
-            this.router.navigate(["home"]);
+            this.router.navigate(["userHub"]);
           }
         }
+    }else{
+      this.hasError=true;
     }
   }
-  home() {
-    this.router.navigate(["home"]);
-  }
 }
+

@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  user:User;
+  user:User = null;
 
   constructor(
     private currentUser:CurrentUserService,
@@ -18,12 +18,11 @@ export class HeaderComponent implements OnInit {
     ) { }
 
   ngOnInit() { // May need to switch to obversable method
-    this.currentUser.currentUser$.subscribe(data =>{ this.user = data});
+    this.currentUser.currentUser$.subscribe(data =>{ 
+      this.user = data
+      console.log(this.user);
+    });
   }
-
-  // CurrentUserService.data.subscribe(data:User => {
-  //   this.user = data;
-  // })
 
   hub(user:User):void {
       // Route to user-hub

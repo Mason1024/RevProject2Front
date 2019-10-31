@@ -1,13 +1,13 @@
 <mat-toolbar color="primary">
 	<mat-toolbar-row>
 		<!-- User is logged in -->
-		<div *ngIf="user == undefined">
+		<div *ngIf="user != null">
 			<button mat-raised-button (click)="hub(user)">User Hub</button>
 			<button mat-raised-button (click)="market(user)">Market</button>
 			<button mat-raised-button (click)="logout(user)">Logout</button>
 		</div>
 		<!-- User is not logged in -->
-		<div *ngIf="user != undefined">
+		<div *ngIf="user == null">
 			<button mat-raised-button (click)="login()">Login</button>
 			<button mat-raised-button (click)="register()">Register</button>
 		</div>
