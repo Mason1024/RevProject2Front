@@ -8,6 +8,7 @@ export class CategoryService {
   constructor() { }
 
   categories:Array<string> = [
+    "All",
     "Furniture",
     "Vehicle Parts",
     "miscellaneous",
