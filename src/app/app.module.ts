@@ -57,7 +57,6 @@ import { CategoriesDropdownComponent } from './components/market/categories-drop
 import { CategoryComponent } from './components/market/category/category.component';
 import { SearchComponent } from './components/market/search/search.component';
 import { PostingContainerComponent } from './components/market/posting-container/posting-container.component';
-import { PostingComponent } from './components/market/posting/posting.component';
 
 //footer
 import { FooterComponent } from './components/footer/footer.component';
@@ -73,7 +72,6 @@ import { FilterPipe } from './pipes/filter.pipe';
     UserHubComponent,
     MarketContainerComponent,
     PostingContainerComponent,
-    PostingComponent,
     CategoriesDropdownComponent,
     CategoryComponent,
     FooterComponent,
