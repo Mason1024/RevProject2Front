@@ -58,6 +58,7 @@ import { PostingContainerComponent } from './components/market/posting-container
 
 //footer
 import { FooterComponent } from './components/footer/footer.component';
+import { PhonePipe } from './pipes/phone.pipe';
 
 @NgModule({
   declarations: [
@@ -72,7 +73,8 @@ import { FooterComponent } from './components/footer/footer.component';
     FooterComponent,
     UserPostingContainerComponent,
     UserPostingComponent,
-    PostingFormComponent
+    PostingFormComponent,
+    PhonePipe
   ],
   imports: [
     BrowserModule,

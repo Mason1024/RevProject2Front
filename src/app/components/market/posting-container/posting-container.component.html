@@ -13,7 +13,7 @@
                 <tr *ngIf="post.endDate>0"><td>Ending</td><td>{{post.endDate | date}}</td></tr>
                 <tr><td>Poster</td><td>{{post.user.username}}</td></tr>
                 <tr *ngIf="post.user.email"><td>Email</td><td>{{post.user.email}}</td></tr>
-                <tr *ngIf="post.user.phoneNumber"><td>Phone</td><td>{{post.user.phoneNumber}}</td></tr>
+                <tr *ngIf="post.user.phoneNumber"><td>Phone</td><td>{{post.user.phoneNumber | phone}}</td></tr>
             </table>
         </mat-card-content>
     </mat-card>
