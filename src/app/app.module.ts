@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CurrentUserService } from './services/current-user.service';
 
 import {MatCheckboxModule} from '@angular/material';
@@ -24,9 +24,6 @@ import {MatCardModule} from '@angular/material/card';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatExpansionModule} from '@angular/material/expansion';
-import {MatButtonToggleModule} from '@angular/material/button-toggle';
-import {MatChipsModule} from '@angular/material/chips';
-import {MatIconModule} from '@angular/material/icon';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatDialogModule} from '@angular/material/dialog';
@@ -56,8 +53,7 @@ import { MarketContainerComponent } from './components/market/market-container/m
 import { CategoriesDropdownComponent } from './components/market/categories-dropdown/categories-dropdown.component';
 import { PostingContainerComponent } from './components/market/posting-container/posting-container.component';
 
-//footer
-import { FooterComponent } from './components/footer/footer.component';
+//pipe
 import { PhonePipe } from './pipes/phone.pipe';
 
 @NgModule({
@@ -70,7 +66,6 @@ import { PhonePipe } from './pipes/phone.pipe';
     MarketContainerComponent,
     PostingContainerComponent,
     CategoriesDropdownComponent,
-    FooterComponent,
     UserPostingContainerComponent,
     UserPostingComponent,
     PostingFormComponent,
@@ -102,9 +97,6 @@ import { PhonePipe } from './pipes/phone.pipe';
     MatStepperModule,
     MatTabsModule,
     MatExpansionModule,
-    MatButtonToggleModule,
-    MatChipsModule,
-    MatIconModule,
     MatProgressSpinnerModule,
     MatProgressBarModule,
     MatDialogModule,
@@ -112,7 +104,6 @@ import { PhonePipe } from './pipes/phone.pipe';
     MatSnackBarModule,
     MatTableModule,
     MatSortModule,
-    MatPaginatorModule
   ],
   providers: [
     CurrentUserService
