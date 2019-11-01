@@ -54,7 +54,6 @@ import { PostingFormComponent } from './components/userHub/posting-form/posting-
 //market
 import { MarketContainerComponent } from './components/market/market-container/market-container.component';
 import { CategoriesDropdownComponent } from './components/market/categories-dropdown/categories-dropdown.component';
-import { CategoryComponent } from './components/market/category/category.component';
 import { SearchComponent } from './components/market/search/search.component';
 import { PostingContainerComponent } from './components/market/posting-container/posting-container.component';
 
