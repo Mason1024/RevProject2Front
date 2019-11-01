@@ -15,15 +15,16 @@ export class PostingContainerComponent implements OnInit {
   
   postings:Posting[];  
  
-  private _catVal:string="";
+  private _catVal:string = "";
   @Input() set catVal(value:string){
     this._catVal=value;
     this.getCatPostings();
   }
 
-  private _searchVal:string="";
+  private _searchVal:string = "";
   @Input() set searchVal(value:string){
-    this._searchVal=value.toLocaleLowerCase();
+    if (value != null)
+      this._searchVal=value.toLocaleLowerCase();
   }
 
   ngOnInit() {
@@ -48,7 +49,10 @@ export class PostingContainerComponent implements OnInit {
   }
 
   filterPostings(posting_collection:Posting[]): Posting[]{
+    if (posting_collection != null) {
       return posting_collection.filter(i => i.title.toLocaleLowerCase().includes(this._searchVal));
+    }
+    return posting_collection
   }
 
 }

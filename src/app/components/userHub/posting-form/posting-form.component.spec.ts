@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 
 import { PostingFormComponent } from './posting-form.component';
+import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule, MatOptionModule, MatSelectModule } from '@angular/material';
 
 describe('PostingFormComponent', () => {
   let component: PostingFormComponent;
@@ -8,7 +12,8 @@ describe('PostingFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PostingFormComponent ]
+      declarations: [ PostingFormComponent ],
+      imports: [ FormsModule, MatFormFieldModule, MatOptionModule, MatSelectModule, HttpClientTestingModule, BrowserAnimationsModule ]
     })
     .compileComponents();
   }));

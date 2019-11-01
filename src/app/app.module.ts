@@ -31,7 +31,6 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
-import {MatPaginatorModule} from '@angular/material/paginator';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -44,7 +43,6 @@ import { NewUserComponent } from './components/header/new-user/new-user.componen
 //user hub
 import { UserHubComponent } from './components/userHub/user-hub/user-hub.component';
 import { UserPostingContainerComponent } from './components/userHub/user-posting-container/user-posting-container.component';
-import { UserPostingComponent } from './components/userHub/user-posting/user-posting.component';
 import { PostingFormComponent } from './components/userHub/posting-form/posting-form.component';
 
 
@@ -55,6 +53,7 @@ import { PostingContainerComponent } from './components/market/posting-container
 
 //pipe
 import { PhonePipe } from './pipes/phone.pipe';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -67,7 +66,6 @@ import { PhonePipe } from './pipes/phone.pipe';
     PostingContainerComponent,
     CategoriesDropdownComponent,
     UserPostingContainerComponent,
-    UserPostingComponent,
     PostingFormComponent,
     PhonePipe
   ],
@@ -103,7 +101,7 @@ import { PhonePipe } from './pipes/phone.pipe';
     MatTooltipModule,
     MatSnackBarModule,
     MatTableModule,
-    MatSortModule,
+    MatSortModule
   ],
   providers: [
     CurrentUserService
