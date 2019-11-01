@@ -14,7 +14,7 @@ export class PostingContainerComponent implements OnInit {
   ) { }
   
   postings:Posting[];  
-
+ 
   private _catVal:string="";
   @Input() set catVal(value:string){
     this._catVal=value;
@@ -37,9 +37,14 @@ export class PostingContainerComponent implements OnInit {
   }
 
   getCatPostings(){
-    this.postingService.getAllPostingsByCategory(this._catVal).then((info)=>{
-      this.postings = info; 
-    })
+    if(this._catVal=="All"){
+      this.getPostings();
+    }else{
+      this.postingService.getAllPostingsByCategory(this._catVal).then((info)=>{
+        this.postings = info; 
+      })
+    }
+    
   }
 
   filterPostings(posting_collection:Posting[]): Posting[]{
