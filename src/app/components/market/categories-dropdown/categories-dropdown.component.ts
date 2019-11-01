@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { CategoryService } from 'src/app/services/category.service';
 
 @Component({
@@ -10,16 +10,11 @@ export class CategoriesDropdownComponent implements OnInit {
 
   categories:Array<string>;
 
+  @Output() catVal:string;
 
   constructor(private categoryService:CategoryService) { }
 
   ngOnInit(): void {
-
     this.categories = this.categoryService.getAllCategories();
   }
-
-  openCategoryPage(name:string) {
-    // Route to category page
-  }
-
 }

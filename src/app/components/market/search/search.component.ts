@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { PostingService } from 'src/app/services/posting.service';
+import { Component, OnInit, Output } from '@angular/core';
 import { Posting } from 'src/app/models/posting';
 
 @Component({
@@ -9,26 +8,13 @@ import { Posting } from 'src/app/models/posting';
 })
 export class SearchComponent {
 
-  constructor(
-    private postingService: PostingService
-  ) { }
+  constructor(  ) { }
 
-  // searchTerm:string = "";
-  
-  search():void {
-    this.getPostings();
-   }
+  @Output() searchVal:string;
+
   postings:Posting[];  
 
   ngOnInit() {
     
   }
-
-  getPostings(){
-    this.postingService.getAllPostings().then((info)=>{
-      this.postings = info; 
-    })
-  }
-
-
 }

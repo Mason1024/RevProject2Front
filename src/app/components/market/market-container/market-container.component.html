@@ -1,7 +1,17 @@
-<table>
-    <tr>
-        <td><app-search></app-search></td>
-        <td><app-categories-dropdown></app-categories-dropdown></td>
-    </tr>
-</table>
-<app-posting-container></app-posting-container>
+<mat-toolbar color="secondary" style="padding: 12px;">
+    <mat-toolbar-row>
+        <mat-form-field>
+            <mat-label>Search</mat-label>
+            <input matInput type="search" [(ngModel)] = "searchTerm">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Categories</mat-label>
+            <mat-select [(ngModel)] = "category">
+                <mat-option *ngFor="let cat of categories" [value]="cat">
+                {{cat}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </mat-toolbar-row>
+</mat-toolbar>
+<app-posting-container [searchVal]="searchTerm" [catVal]="category"></app-posting-container>
