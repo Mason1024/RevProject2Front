@@ -18,3 +18,12 @@ mat-card img{
     height: 200px;
     margin: auto;
 }
+
+button{
+    position: absolute;
+    bottom: 1%;
+}
+
+table{
+    padding-bottom: 15px;
+}
