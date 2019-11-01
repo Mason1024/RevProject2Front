@@ -10,7 +10,6 @@ export class CategoryService {
   categories:Array<string> = [
     "All",
     "Furniture",
-    "Vehicle Parts",
     "miscellaneous",
     "antiques",
     "appliances",
