@@ -8,6 +8,7 @@
             <p>{{post.description}}</p>
             <table>
                 <tr><td>Category</td><td>{{post.category}}</td></tr>
+                <tr><td>Location</td><td>{{post.location}}</td></tr>
                 <tr><td>Posted</td><td>{{post.initDate | date}}</td></tr>
                 <tr *ngIf="post.endDate>0"><td>Ending</td><td>{{post.endDate | date}}</td></tr>
                 <tr><td>Poster</td><td>{{post.user.username}}</td></tr>
