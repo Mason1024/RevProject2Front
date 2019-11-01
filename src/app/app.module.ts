@@ -71,7 +71,6 @@ import { FooterComponent } from './components/footer/footer.component';
     MarketContainerComponent,
     PostingContainerComponent,
     CategoriesDropdownComponent,
-    CategoryComponent,
     FooterComponent,
     UserPostingContainerComponent,
     UserPostingComponent,
