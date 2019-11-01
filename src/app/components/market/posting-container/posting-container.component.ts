@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Posting } from '../../../models/posting';
 import { PostingService } from '../../../services/posting.service';
+import { PageEvent } from '@angular/material';
 
 @Component({
   selector: 'app-posting-container',
@@ -13,7 +14,9 @@ export class PostingContainerComponent implements OnInit {
     private postingService: PostingService
   ) { }
   
-  postings:Posting[];  
+  pageEvent:PageEvent;
+  postings:Posting[];
+  filtered:Posting[];
  
   private _catVal:string="";
   @Input() set catVal(value:string){
@@ -30,25 +33,28 @@ export class PostingContainerComponent implements OnInit {
     this.getPostings();
   }
 
-  getPostings(){
+  getPostings():void {
     this.postingService.getAllPostings().then((info)=>{
-      this.postings = info; 
+      this.postings = info;
+      this.filtered = info;
     })
   }
 
-  getCatPostings(){
+  getCatPostings():void {
     if(this._catVal=="All"){
       this.getPostings();
     }else{
       this.postingService.getAllPostingsByCategory(this._catVal).then((info)=>{
-        this.postings = info; 
+        this.postings = info;
+        this.filtered = info;
       })
     }
     
   }
 
   filterPostings(posting_collection:Posting[]): Posting[]{
-      return posting_collection.filter(i => i.title.toLocaleLowerCase().includes(this._searchVal));
+      this.filtered = posting_collection.filter(i => i.title.toLocaleLowerCase().includes(this._searchVal));
+      return this.filtered;
   }
 
 }
