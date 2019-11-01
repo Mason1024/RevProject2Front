@@ -54,7 +54,6 @@ import { PostingFormComponent } from './components/userHub/posting-form/posting-
 //market
 import { MarketContainerComponent } from './components/market/market-container/market-container.component';
 import { CategoriesDropdownComponent } from './components/market/categories-dropdown/categories-dropdown.component';
-import { SearchComponent } from './components/market/search/search.component';
 import { PostingContainerComponent } from './components/market/posting-container/posting-container.component';
 
 //footer
@@ -63,7 +62,6 @@ import { FooterComponent } from './components/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
-    SearchComponent,
     HeaderComponent,
     LoginComponent,
     NewUserComponent,
