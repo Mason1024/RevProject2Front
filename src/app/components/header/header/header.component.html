@@ -11,5 +11,8 @@
 			<button mat-raised-button (click)="login()">Login</button>
 			<button mat-raised-button (click)="register()">Register</button>
 		</div>
+		<div style="margin-left: 80%;" *ngIf="user != null">
+			Welcome {{user.username}}
+		</div>
 	</mat-toolbar-row>
 </mat-toolbar>

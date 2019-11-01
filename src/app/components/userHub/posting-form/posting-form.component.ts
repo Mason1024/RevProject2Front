@@ -14,15 +14,25 @@ export class PostingFormComponent implements OnInit {
 
   user:User = null;
 
-  constructor(private categoryService:CategoryService, 
+  postTitle:string;
+  postDesc:string;
+  postCat:string;
+  postLocation:string;
+  postEndDate:number;
+  postImg:string;
+
+
+  constructor(
+    private categoryService:CategoryService, 
     private postingService:PostingService, 
-    private userService:CurrentUserService ) { }
+    private userService:CurrentUserService 
+    ) { }
 
   ngOnInit() {
-    for(let i = 0; i < this.categoryService.getAllCategories().length; i++)
-    document.getElementById("categoriesDropdown").innerHTML +=
-    "<option id='" + this.categoryService.getAllCategories()[i] + "'>" + 
-    this.categoryService.getAllCategories()[i] + "</option>";
+    // for(let i = 0; i < this.categoryService.getAllCategories().length; i++)
+    // document.getElementById("categoriesDropdown").innerHTML +=
+    // "<option id='" + this.categoryService.getAllCategories()[i] + "'>" + 
+    // this.categoryService.getAllCategories()[i] + "</option>";
 
     this.userService.currentUser$.subscribe(data =>{ 
       this.user = data
@@ -30,25 +40,16 @@ export class PostingFormComponent implements OnInit {
   }
 
   createPost(){
-   let post:Posting = new Posting(0, this.user, 
-    document.getElementById("description").value, 
-    document.getElementById("categoriesDropdown").value, 
-    document.getElementById("location").value,
-    0,
-    document.getElementById("endDate").value, 
-    document.getElementById("title").value, 
-    "");
+   let post:Posting = new Posting(
+      0, 
+      this.user, 
+      this.postDesc, 
+      this.postCat, 
+      this.postLocation,
+      0,
+      this.postEndDate, 
+      this.postTitle, 
+      this.postImg);
     this.postingService.createPosting(post);
   }
-
-
 }
-
-
-// id:number;
-// user:number;
-// description:string;
-// category:string;
-// location:string;
-// initDate:number;
-// endDate:number;

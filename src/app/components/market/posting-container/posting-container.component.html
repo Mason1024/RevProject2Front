@@ -1,19 +1,15 @@
 <div class='flex-container'>
-    {{searchVal}}
-    {{catVal}}
-    <mat-card *ngFor="let post of postings">
+    <mat-card *ngFor="let post of filterPostings(postings)">
         <mat-card-header>
             <mat-card-title>{{post.title}}</mat-card-title>
-            <mat-card-subtitle>{{post.category}}</mat-card-subtitle>
         </mat-card-header>
         <img mat-card-image src="{{post.img}}" alt="No Image">
         <mat-card-content>
             <p>{{post.description}}</p>
             <table>
+                <tr><td>Category</td><td>{{post.category}}</td></tr>
                 <tr><td>Posted</td><td>{{post.initDate | date}}</td></tr>
                 <tr *ngIf="post.endDate>0"><td>Ending</td><td>{{post.endDate | date}}</td></tr>
-            </table>
-            <table>
                 <tr><td>Poster</td><td>{{post.user.username}}</td></tr>
                 <tr *ngIf="post.user.email"><td>Email</td><td>{{post.user.email}}</td></tr>
                 <tr *ngIf="post.user.phoneNumber"><td>Phone</td><td>{{post.user.phoneNumber}}</td></tr>
