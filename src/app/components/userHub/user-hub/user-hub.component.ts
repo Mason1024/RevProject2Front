@@ -27,7 +27,7 @@ export class UserHubComponent implements OnInit {
   postDesc:string;
   postCat:string;
   postLocation:string;
-  postEndDate:number;
+  postEndDate:string;
   postImg:string;
 
   postingSubmitted:boolean=false;
@@ -60,7 +60,7 @@ export class UserHubComponent implements OnInit {
       this.postCat, 
       this.postLocation,
       0,
-      this.postEndDate, 
+      (+new Date(this.postEndDate)), 
       this.postTitle, 
       this.postImg);
 
