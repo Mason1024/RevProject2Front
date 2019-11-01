@@ -1,0 +1,35 @@
+
+    <!-- title:string; -->
+    <div>
+        <button onclick="createPost()">Create Post</button></div>
+<div>
+    <table>
+        <tr>
+            <th>Posting title></th><th>Category</th><th>Location</th><th>End date</th>
+        </tr>
+        <tr>
+            <td><input [(ngModel)]="postTitle" type="text" id="title"></td>
+            <td>
+                <mat-form-field>
+                    <mat-label>Categories</mat-label>
+                    <mat-select [(ngModel)] = "postCat">
+                        <mat-option *ngFor="let cat of categories" [value]="cat">
+                        {{cat}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </td>
+            <td><input [(ngModel)]="postLocation" type="text" id="location"></td>
+            <td><input [(ngModel)]="postEndDate" type="date" id="endDate"></td>
+        </tr>
+</table>
+</div>
+<div>
+    <h4>Description</h4>
+</div>
+<div>
+    <input [(ngModel)]="postDesc" type="text" id="description">
+</div>
+
+
+    

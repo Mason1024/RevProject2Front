@@ -1,0 +1,18 @@
+<div class="form">
+    <table style="margin: auto;">
+        <tr>
+            <mat-form-field>
+                <input matInput [(ngModel)]="username" name="username" type="text" placeholder="Username">
+            </mat-form-field>
+        </tr>
+        <tr>
+            <mat-form-field>
+                <input matInput [(ngModel)]="password" name="password" type="password" placeholder="Password">
+            </mat-form-field>
+        </tr>
+        <tr>
+            <button mat-raised-button color="primary" (click)="validate()" type="submit">Login</button>
+            <button mat-raised-button color="primary" (click)="home()">Cancel</button>
+        </tr>
+    </table>
+</div>

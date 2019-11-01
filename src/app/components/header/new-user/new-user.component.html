@@ -1,0 +1,46 @@
+<div class="form">
+    <table style="margin: auto;">
+        <tr>
+            <td>
+                <mat-form-field>
+                    <input matInput [(ngModel)]="username" name="username" type="text" placeholder="Username">
+                </mat-form-field>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <mat-form-field>
+                    <input matInput [(ngModel)]="password" name="password" type="password" placeholder="Password">
+                </mat-form-field>
+            </td>
+            <td>
+                <mat-form-field>
+                    <input matInput [(ngModel)]="confirmPassword" name="confirmPassword" type="password" placeholder="Confirm Password">
+                </mat-form-field>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <mat-form-field>
+                    <input matInput [(ngModel)]="email" name="email" type="email" placeholder=" Email">
+                </mat-form-field>
+            </td>
+            <td>
+                <mat-form-field>
+                    <input matInput [(ngModel)]="phone" name="phone" type="tel" placeholder="Phone">
+                </mat-form-field>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" *ngIf="hasError">Data entry error</td>
+        </tr>
+        <tr>
+            <td>
+                <button mat-raised-button color="primary" (click)="validate()" type="submit">Sign Up</button>
+            </td>
+            <td>
+                <button mat-raised-button color="primary" (click)="home()">Cancel</button>
+            </td>
+        </tr>
+    </table>
+</div>

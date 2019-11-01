@@ -1,0 +1,8 @@
+<mat-form-field>
+  <mat-label>Categories</mat-label>
+  <mat-select [(ngModel)] = "catVal">
+    <mat-option *ngFor="let category of categories" [value]="category">
+      {{category}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

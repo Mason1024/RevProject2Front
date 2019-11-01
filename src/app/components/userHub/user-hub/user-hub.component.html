@@ -1,0 +1,42 @@
+
+<mat-toolbar color="secondary" style="padding: 12px;">
+    <mat-toolbar-row>
+        <table style="margin-right: 1%; margin-left: -1.5%;">
+            <tr><button mat-raised-button color="primary" (click)="showPost()">New Post</button></tr>
+            <tr><button mat-raised-button color="primary" (click)="cancelPost()">Cancel</button></tr>
+        </table>
+        <div [style.visibility]="postForm">
+            <mat-form-field>
+                <mat-label>Title</mat-label>
+                <input matInput [(ngModel)]="postTitle" type="text" id="postTitle">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Description</mat-label>
+                <input matInput [(ngModel)]="postDesc" type="text" id="postDesc">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Categories</mat-label>
+                <mat-select [(ngModel)] = "postCat">
+                    <mat-option *ngFor="let cat of categories" [value]="cat">
+                    {{cat}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Location</mat-label>
+                <input matInput [(ngModel)]="postLocation" type="text" id="postLocation">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>EndDate</mat-label>
+                <input matInput [(ngModel)]="postEndDate" type="date" id="postEndDate">
+                <mat-hint align="end"><small>Optional</small></mat-hint>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Image</mat-label>
+                <input matInput [(ngModel)]="postImg" type="text" id="postImg">
+            </mat-form-field>
+            <button mat-raised-button color="primary" (click)="submitPost()" style="margin-left: 1%;">Submit</button>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+<app-user-posting-container [newPosting]="postingSubmitted"></app-user-posting-container>
