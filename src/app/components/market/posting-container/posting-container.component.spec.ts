@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { PostingContainerComponent } from './posting-container.component';
+import { MatInputModule, MatCardModule, MatOptionModule } from '@angular/material';
+import { PhonePipe } from 'src/app/pipes/phone.pipe';
 
 describe('PostingContainerComponent', () => {
   let component: PostingContainerComponent;
@@ -8,7 +11,8 @@ describe('PostingContainerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PostingContainerComponent ]
+      declarations: [ PostingContainerComponent, PhonePipe ],
+      imports: [ MatInputModule, MatCardModule, MatOptionModule, HttpClientTestingModule ]
     })
     .compileComponents();
   }));
