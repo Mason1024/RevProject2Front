@@ -11,12 +11,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatRadioModule} from '@angular/material/radio';
-import {MatSelectModule} from '@angular/material/select';
-import {MatSliderModule} from '@angular/material/slider';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatMenuModule} from '@angular/material/menu';
-import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import {MatGridListModule} from '@angular/material/grid-list';
@@ -43,17 +38,14 @@ import { NewUserComponent } from './components/header/new-user/new-user.componen
 //user hub
 import { UserHubComponent } from './components/userHub/user-hub/user-hub.component';
 import { UserPostingContainerComponent } from './components/userHub/user-posting-container/user-posting-container.component';
-import { PostingFormComponent } from './components/userHub/posting-form/posting-form.component';
 
 
 //market
 import { MarketContainerComponent } from './components/market/market-container/market-container.component';
-import { CategoriesDropdownComponent } from './components/market/categories-dropdown/categories-dropdown.component';
 import { PostingContainerComponent } from './components/market/posting-container/posting-container.component';
 
 //pipe
 import { PhonePipe } from './pipes/phone.pipe';
-import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -64,9 +56,7 @@ import { from } from 'rxjs';
     UserHubComponent,
     MarketContainerComponent,
     PostingContainerComponent,
-    CategoriesDropdownComponent,
     UserPostingContainerComponent,
-    PostingFormComponent,
     PhonePipe
   ],
   imports: [
@@ -82,12 +72,7 @@ import { from } from 'rxjs';
     MatAutocompleteModule,
     MatDatepickerModule,
     MatFormFieldModule,
-    MatRadioModule,
-    MatSelectModule,
-    MatSliderModule,
-    MatSlideToggleModule,
     MatMenuModule,
-    MatSidenavModule,
     MatToolbarModule,
     MatListModule,
     MatGridListModule,
